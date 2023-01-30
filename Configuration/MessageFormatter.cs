@@ -1,8 +1,9 @@
 ﻿using System.Text;
+using AuthService.Extensions;
 using Serilog.Events;
 using Serilog.Formatting;
 
-namespace AuthService
+namespace AuthService.Utility
 {
     public class MessageFormatter : ITextFormatter
     {

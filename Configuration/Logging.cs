@@ -1,6 +1,6 @@
 ﻿using Serilog.Events;
 
-namespace AuthService
+namespace AuthService.Utility
 {
     public class Logging
     {

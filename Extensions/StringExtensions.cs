@@ -2,7 +2,7 @@
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace AuthService
+namespace AuthService.Extensions
 {
     public static class StringExtensions
     {

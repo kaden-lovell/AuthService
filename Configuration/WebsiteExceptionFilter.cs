@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Serilog;
 
-namespace AuthService
+namespace AuthService.Utility
 {
     public class WebsiteExceptionFilter : IExceptionFilter
     {

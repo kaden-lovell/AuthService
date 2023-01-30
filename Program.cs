@@ -1,5 +1,6 @@
 // TODO: fill in these fields
 using AuthService;
+using AuthService.Utility;
 using Microsoft.AspNetCore;
 using Serilog;
 using Serilog.Events;
@@ -10,6 +11,7 @@ var logging = new Logging();
 
 configuration.GetSection("Logging").Bind(logging);
 
+// INITIALIZE LOGGING
 if (string.IsNullOrWhiteSpace(logging.OutputTemplate))
 {
     Log.Logger =
@@ -36,6 +38,7 @@ else
         .CreateLogger();
 }
 
+// START APPLICATION
 try
 {
     Log.Information("Starting web host");
@@ -52,11 +55,10 @@ finally {
     Log.CloseAndFlush();
 }
 
-static IWebHost BuildWebHost(string[] args) =>
-  WebHost.CreateDefaultBuilder(args)
-    .UseStartup<Startup>()
-    .UseSerilog()
-    .Build();
+static IWebHost BuildWebHost(string[] args)
+{
+    return WebHost.CreateDefaultBuilder(args).UseStartup<Startup>().UseSerilog().Build();
+}
 
 //var builder = WebApplication.CreateBuilder(args);
 

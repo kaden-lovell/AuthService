@@ -6,9 +6,9 @@ Enable WSL 2 (Ubuntu, any version)
 Start WSL 2
 
 Install:
-Dotnet Core 7.0 (check version
-Docker Desktop
-Visual Studio (latest year version)
+Dotnet Core 7.0 (check version of project)
+Docker Desktop (latest version)
+Visual Studio (latest version)
 Resharper (license provided)
 
 Commands to know (ignore `` when copying):
@@ -17,6 +17,11 @@ Commands to know (ignore `` when copying):
 `docker run -it --rm -p <port:protocol> --name <mymicroservicecontainer> mymicroservice`
 
 
-Build Commands/Procedure:
+Build Commands/Procedure (Docker image should be maintained through all stages of project lifecycle):
+-- Local Testing
+dotnet build
+dotnet run
+
+-- Before Pushing
 docker build -t AuthService
 docker run -it --rm -p <3000:80> --name authservicecontainer authservice
