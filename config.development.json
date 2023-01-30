@@ -1,0 +1,18 @@
+﻿{
+  "Authentication": {
+    "KeyDirectory": "C:\\Websites\\auth-ticket-keys"
+  },
+  "ConnectionStrings": {
+    //"MSSQL": "Data Source=localhost;Initial Catalog=database_name;Integrated Security=True;MultipleActiveResultSets=True;TrustServerCertificate=true"
+  },
+  "Environment": {
+    "Auth": "auth.{0}:8001"
+  },
+  "Logging": {
+    "LogLevel": "Debug",
+    "PathFormat": "C:\\Websites\\logs\\auth\\log-.txt"
+  },
+  "Network": {
+    "RequireHttps": false
+  }
+}

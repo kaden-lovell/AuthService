@@ -1,0 +1,10 @@
+﻿{
+  "Application": {
+    "Name": "TBD",
+    "Company": "TBD"
+  },
+  "Logging": {
+    "FileCountLimit": 7,
+    "FileSizeLimit": 1073741824
+  }
+}
